@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:id="@+id/candid_welcome"
+        android:src="@mipmap/candid_welcome"
+        android:paddingEnd="0dp"
+        android:layout_marginLeft="0dp"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="0dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Candid provides most recently facts to voters on the go"
+        android:id="@+id/welcome_text1"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginBottom="45dp"
+        android:textColor="#3a3f9d"
+        android:layout_alignBottom="@+id/candid_welcome"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Welcome to Candid!"
+        android:id="@+id/welcome_text2"
+        android:layout_above="@+id/welcome_text1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
+        android:textColor="#3a3f9d"
+        android:textSize="34dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Select Your Location:"
+        android:id="@+id/select_text"
+        android:layout_below="@+id/candid_welcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Or"
+        android:id="@+id/or_text"
+        android:layout_below="@+id/current_location_button"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="30dp" />
+
+    <EditText
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/zipcode"
+        android:hint="Enter ZIP Code"
+        android:paddingTop="27dp"
+        android:layout_below="@+id/or_text"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:text="Current Location"
+        android:id="@+id/current_location_button"
+        android:layout_below="@+id/select_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_alignParentStart="false"
+        android:background="#3a3f9d"
+        android:textColor="#ffffff" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:text="Submit"
+        android:id="@+id/zipcode_button"
+        android:layout_below="@+id/zipcode"
+        android:layout_centerHorizontal="true"
+        android:background="#3a3f9d"
+        android:textColor="#FFFFFF" />
+
+</RelativeLayout>
