@@ -1,6 +1,7 @@
 package com.android.candid;
 
 import android.os.Bundle;
+import android.support.v4.view.ViewPager;
 import android.support.wearable.activity.WearableActivity;
 import android.support.wearable.view.BoxInsetLayout;
 import android.view.View;
@@ -19,12 +20,17 @@ public class MainActivity extends WearableActivity {
     private TextView mTextView;
     private TextView mClockView;
 
+//    ViewPager viewPager;
+//    SwipeAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setAmbientEnabled();
-
+//        viewPager = (ViewPager) findViewById(R.id.view_pager);
+//        adapter = new SwipeAdapter(this);
+//        viewPager.setAdapter(adapter);
         
     }
 

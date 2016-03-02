@@ -16,16 +16,54 @@
             android:name="com.google.android.wearable"
             android:required="false" />
 
-        <activity
-            android:name=".MainActivity"
-            android:label="@string/app_name"
-            android:theme="@android:style/Theme.DeviceDefault.Light">
+        <activity android:name=".MainActivity"
+            android:label = "@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".PressResult"
+            android:label = "@string/app_name"
+            android:parentActivityName="com.android.candid.SwipeLayout">
+            <intent-filter>
+                <action android:name="com.android.candid.PressResult" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".CurrDetails"
+            android:label = "@string/app_name"
+            android:parentActivityName="com.android.candid.SwipeLayout">
+            <intent-filter>
+                <action android:name="com.android.candid.PressResult" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".PressResult1"
+            android:label = "@string/app_name"
+            android:parentActivityName="com.android.candid.SwipeLayout">
+            <intent-filter>
+                <action android:name="com.android.candid.PressResult" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ZipDetails"
+            android:label = "@string/app_name"
+            android:parentActivityName="com.android.candid.SwipeLayout">
+            <intent-filter>
+                <action android:name="com.android.candid.PressResult" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

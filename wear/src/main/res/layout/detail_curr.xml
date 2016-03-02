@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/curr_list"
+    android:background="#ffffff"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#6748ff">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/bm_imgb"
+            android:background="#6748ff"
+            android:layout_marginTop="53dp"
+            android:src="@mipmap/bm_icon"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Barbara Mikulski, Democrat"
+            android:id="@+id/bm_textb"
+            android:layout_below="@+id/bm_imgb"
+            android:layout_centerHorizontal="true"
+            android:textColor="#ffffff"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/bb_imgb"
+            android:background="#6748ff"
+            android:layout_below="@+id/bm_textb"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/bb"
+            android:scaleType="fitXY" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Barbara Boxer, Democrat"
+            android:id="@+id/bb_textb"
+            android:textColor="#ffffff"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_below="@+id/bb_imgb"
+            android:layout_centerHorizontal="true" />
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/bl_imgb"
+            android:background="#6748ff"
+            android:src="@mipmap/bl"
+            android:scaleType="fitXY"
+            android:layout_below="@+id/bb_textb"
+            android:layout_alignStart="@+id/bb_imgb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Barbara Lee, Democrat"
+            android:id="@+id/bl_textb"
+            android:textColor="#ffffff"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:layout_below="@+id/bl_imgb"
+            android:layout_alignEnd="@+id/bb_textb" />
+    </RelativeLayout>
+</ScrollView>
