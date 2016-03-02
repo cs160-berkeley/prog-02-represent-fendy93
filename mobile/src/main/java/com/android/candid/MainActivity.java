@@ -33,14 +33,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     editText.setError("Please enter ZIP Code: 76768");
                 } else {
                     Intent intent = new Intent(MainActivity.this, MainToZip.class);
+                    Intent sendIntent = new Intent(getBaseContext(), PhoneToWatchService.class);
                     String message = editText.getText().toString();
                     intent.putExtra(EXTRA_MESSAGE, message);
+                    sendIntent.putExtra("Location", "ZIP");
+                    startService(sendIntent);
                     startActivity(intent);
                 }
             }
         });
 
-        current_button.setOnClickListener(this);
+        current_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sendIntent = new Intent(getBaseContext(), PhoneToWatchService.class);
+                Intent intent = new Intent(MainActivity.this, MainToCurrent.class);
+                sendIntent.putExtra("Location", "Current");
+                startService(sendIntent);
+                startActivity(intent);
+            }
+        });
     }
 
     private void ZipButton(){
