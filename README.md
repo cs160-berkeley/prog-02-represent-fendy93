@@ -27,9 +27,6 @@ See [Candid Wireframe] (https://youtu.be/oRLNPeNx0gs)
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-Youtube
-Stackoverflow
-Treehouse
-* Any other support
-Friends
+* Youtube
+* Stackoverflow
+* Treehouse
