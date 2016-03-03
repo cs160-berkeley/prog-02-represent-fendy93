@@ -47,15 +47,47 @@ public class CurrDetails extends WearableActivity {
             }
         });
 
-//        TextView text_bm = (TextView) findViewById(R.id.bm_textb);
-//        text_bm.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent sendIntent = new Intent(getBaseContext(), WatchToPhoneService.class);
-//                sendIntent.putExtra("Initial", "BM_TXT");
-//                startService(sendIntent);
-//            }
-//        });
+        ImageButton img_bb = (ImageButton) findViewById(R.id.bb_imgb);
+        img_bb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sendIntent = new Intent(getBaseContext(), WatchToPhoneService.class);
+
+                Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.id.bb_imgb);
+                sendIntent.putExtra("image", bitmap);
+
+                TextView editText = (TextView) findViewById(R.id.bb_textb);
+                String message = editText.getText().toString();
+                sendIntent.putExtra("fullname", message);
+
+                TextView editText1 = (TextView) findViewById(R.id.bb_party);
+                String message1 = editText1.getText().toString();
+                sendIntent.putExtra("party", message1);
+
+                startService(sendIntent);
+            }
+        });
+
+        ImageButton img_bl = (ImageButton) findViewById(R.id.bl_imgb);
+        img_bl.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent sendIntent = new Intent(getBaseContext(), WatchToPhoneService.class);
+
+                Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.id.bb_imgb);
+                sendIntent.putExtra("image", bitmap);
+
+                TextView editText = (TextView) findViewById(R.id.bl_name);
+                String message = editText.getText().toString();
+                sendIntent.putExtra("fullname", message);
+
+                TextView editText1 = (TextView) findViewById(R.id.bl_party);
+                String message1 = editText1.getText().toString();
+                sendIntent.putExtra("party", message1);
+
+                startService(sendIntent);
+            }
+        });
 
     }
 }

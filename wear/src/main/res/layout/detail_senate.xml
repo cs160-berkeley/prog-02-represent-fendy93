@@ -8,7 +8,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="700dp"
+        android:layout_height="800dp"
         android:layout_gravity="center_horizontal"
         android:background="#fe4949"
         android:paddingTop="5dp"
@@ -19,23 +19,33 @@
             android:layout_height="100dp"
             android:id="@+id/jc_imgb"
             android:background="#fe4949"
-            android:layout_marginTop="55dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/tc_imgb"
+            android:layout_marginTop="43dp"
             android:src="@mipmap/jc"
-            android:scaleType="fitXY" />
+            android:scaleType="fitXY"
+            android:layout_alignParentTop="true"
+            android:layout_alignEnd="@+id/mk_textb" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="John Cornyn, Republican"
+            android:text="John Cornyn"
             android:id="@+id/jc_textb"
             android:textColor="#ffffff"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:layout_below="@+id/jc_imgb"
             android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Republican"
+            android:id="@+id/jc_party"
+            android:paddingBottom="10dp"
+            android:layout_below="@+id/jc_textb"
+            android:layout_alignStart="@+id/tc_party" />
 
         <ImageButton
             android:layout_width="100dp"
@@ -44,14 +54,14 @@
             android:background="#fe4949"
             android:src="@mipmap/tc"
             android:scaleType="fitXY"
-            android:layout_below="@+id/jc_textb"
-            android:layout_alignStart="@+id/mk_imgb" />
+            android:layout_below="@+id/jc_party"
+            android:layout_alignStart="@+id/jc_imgb" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Ted Cruz, Republican"
+            android:text="Ted Cruz"
             android:id="@+id/tc_textb"
             android:textColor="#ffffff"
             android:paddingTop="5dp"
@@ -59,27 +69,47 @@
             android:layout_below="@+id/tc_imgb"
             android:layout_centerHorizontal="true" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Republican"
+            android:id="@+id/tc_party"
+            android:layout_below="@+id/tc_textb"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dp" />
+
         <ImageButton
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:id="@+id/lm_imgb"
             android:background="#fe4949"
-            android:layout_below="@+id/tc_textb"
-            android:layout_centerHorizontal="true"
             android:src="@mipmap/lm"
-            android:scaleType="fitXY" />
+            android:scaleType="fitXY"
+            android:layout_below="@+id/tc_party"
+            android:layout_alignStart="@+id/mk_textb" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Lamar Smith, Republican"
+            android:text="Lamar Smith"
             android:id="@+id/lm_textb"
             android:textColor="#ffffff"
             android:paddingTop="5dp"
             android:paddingBottom="5dp"
             android:layout_below="@+id/lm_imgb"
             android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Republican"
+            android:id="@+id/lm_party"
+            android:layout_below="@+id/lm_textb"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dp" />
 
         <ImageButton
             android:layout_width="100dp"
@@ -88,19 +118,30 @@
             android:background="#fe4949"
             android:src="@mipmap/mk"
             android:scaleType="fitXY"
-            android:layout_below="@+id/lm_textb"
-            android:layout_alignStart="@+id/lm_imgb" />
+            android:layout_below="@+id/lm_party"
+            android:layout_alignEnd="@+id/lm_textb" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Mike Keough, Republican"
+            android:text="Mike Keough"
             android:id="@+id/mk_textb"
             android:textColor="#ffffff"
-            android:layout_below="@+id/mk_imgb"
-            android:layout_alignStart="@+id/lm_textb"
             android:paddingTop="5dp"
-            android:paddingBottom="5dp" />
+            android:paddingBottom="5dp"
+            android:layout_below="@+id/mk_imgb"
+            android:layout_alignStart="@+id/jc_textb" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Republican"
+            android:id="@+id/mk_party"
+            android:layout_below="@+id/mk_textb"
+            android:layout_centerHorizontal="true"
+            android:paddingBottom="10dp" />
+
     </RelativeLayout>
 </ScrollView>

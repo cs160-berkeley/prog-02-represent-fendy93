@@ -108,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="19.4%"
-                android:id="@+id/textView11"
+                android:id="@+id/ob_v"
                 android:textColor="#000000"
                 android:layout_weight="0.13"
                 android:textAlignment="center" />
@@ -118,10 +118,10 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="of votes"
-                android:id="@+id/textView14"
                 android:layout_weight="0.10"
                 android:textColor="#000000"
-                android:textAlignment="center" />
+                android:textAlignment="center"
+                android:id="@+id/textView11" />
         </LinearLayout>
 
         <LinearLayout
@@ -150,7 +150,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="79.6%"
-                android:id="@+id/textView13"
+                android:id="@+id/r_v"
                 android:textColor="#000000"
                 android:layout_weight="0.09"
                 android:textAlignment="center" />

@@ -35,6 +35,7 @@ public class WatchToPhoneService extends Service implements GoogleApiClient.Conn
     private List<Node> nodes = new ArrayList<>();
     public String fullname = "";
     public String party = "";
+    public String zip = "";
 
     @Override
     public void onCreate() {
@@ -64,6 +65,8 @@ public class WatchToPhoneService extends Service implements GoogleApiClient.Conn
 
         fullname = intent.getStringExtra("fullname");
         party = intent.getStringExtra("party");
+        System.out.println(party);
+        zip = intent.getStringExtra("n_zipcode");
         // Send the message with the cat name
 //        new Thread(new Runnable() {
 //            @Override
@@ -71,20 +74,35 @@ public class WatchToPhoneService extends Service implements GoogleApiClient.Conn
                 //first, connect to the apiclient
                 mWatchApiClient.connect();
                 //now that you're connected, send a massage with the cat name
-                sendMessage("/party", party);
-                try{
-                    Thread.sleep(500);
+                if (zip == null) {
+                    sendMessage("/party", party);
+                    try{
+                        Thread.sleep(500);
+                    }
+                    catch ( java.lang.InterruptedException ie) {
+                        System.out.println(ie);
+                    }
+                    sendMessage("/fullname", fullname);
+                    try{
+                        Thread.sleep(500);
+                    }
+                    catch ( java.lang.InterruptedException ie) {
+                        System.out.println(ie);
+                    }
                 }
-                catch ( java.lang.InterruptedException ie) {
-                    System.out.println(ie);
+
+                if (party == null && fullname == null) {
+                    sendMessage("/zip", zip);
+                    System.out.println("***success***");
+                    System.out.println(zip);
                 }
-                sendMessage("/fullname", fullname);
-                try{
-                    Thread.sleep(500);
-                }
-                catch ( java.lang.InterruptedException ie) {
-                    System.out.println(ie);
-                }
+
+//                try{
+//                    Thread.sleep(500);
+//                }
+//                catch ( java.lang.InterruptedException ie) {
+//                    System.out.println(ie);
+//                }
 //                sendMessage("/image", images);
                 try{
                     Thread.sleep(500);

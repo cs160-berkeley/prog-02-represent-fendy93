@@ -24,9 +24,22 @@ public class MainToZip extends AppCompatActivity {
 
         Intent intent = getIntent();
         String zip_num = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
-        TextView textView = (TextView) findViewById(R.id.zipNum);
-        textView.setTextSize(19);
-        textView.setText(zip_num);
+        String zip_watch = intent.getStringExtra("zip");
+        if (zip_watch.equals(zip_num)) {
+            TextView textView = (TextView) findViewById(R.id.zipNum);
+            textView.setTextSize(19);
+            textView.setText("76768");
+        } else {
+            TextView textView1 = (TextView) findViewById(R.id.zipNum);
+            textView1.setTextSize(19);
+            if (zip_watch.equals("1")) {
+                textView1.setText("94703");
+            } else if (zip_watch.equals("2")) {
+                textView1.setText("55233");
+            } else {
+                textView1.setText("99999");
+            }
+        }
 
         TabHost tabhost = (TabHost) findViewById(R.id.tabHost_curr);
 

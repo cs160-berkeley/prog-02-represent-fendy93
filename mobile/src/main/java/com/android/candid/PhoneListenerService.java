@@ -26,10 +26,12 @@ public class PhoneListenerService extends WearableListenerService {
     private static final String IMG = "/image";
     private static final String FN = "/fullname";
     private static final String P = "/party";
+    private static final String ZP = "/zip";
     private static final String DONE = "done";
-    public String image;
+    public Bitmap bitmap;
     public String party;
     public String fullname;
+    public String zip;
 
 
     @Override
@@ -42,17 +44,50 @@ public class PhoneListenerService extends WearableListenerService {
 //            image = new String(messageEvent.getData(), StandardCharsets.UTF_8);
         } else if (messageEvent.getPath().equalsIgnoreCase( FN )) {
             fullname = new String(messageEvent.getData(), StandardCharsets.UTF_8);
+        } else if (messageEvent.getPath().equalsIgnoreCase( ZP )) {
+            zip = new String(messageEvent.getData(), StandardCharsets.UTF_8);
         } else if (messageEvent.getPath().equalsIgnoreCase( DONE )) {
-            Intent intent = new Intent(this, CurrentToDetail.class );
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            //you need to add this flag since you're starting a new activity from a service
+            if (zip == null) {
+                Intent intent = new Intent(this, CurrentToDetail.class);
+
+
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                //you need to add this flag since you're starting a new activity from a service
 //            intent.putExtra(MainActivity.EXTRA_MESSAGE, image);
 //            intent.putExtra(MainActivity.EXTRA_MESSAGE, StringToBitMap(image));
-            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.bmikulski);
-            intent.putExtra(MainActivity.EXTRA_MESSAGE, bitmap);
-            intent.putExtra("fullname", fullname);
-            intent.putExtra("party", party);
-            startActivity(intent);
+//            System.out.println(fullname);
+                if (fullname.equals("Barbara Mikulski")) {
+                    bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.bmikulski);
+                } else if (fullname.equals("Barbara Boxer")) {
+                    bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.dfeinstein);
+//                System.out.println ("2");
+                } else if (fullname.equals("Barbara Lee")) {
+                    bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.blee);
+//                System.out.println ("3");
+                } else if (fullname.equals("John Cornyn")) {
+                    bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.john_corney);
+//                System.out.println ("4");
+                } else if (fullname.equals("Ted Cruz")) {
+                    bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.t_cruz);
+//                System.out.println ("5");
+                } else if (fullname.equals("Lamar Smith")) {
+                    bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.lsmith);
+//                System.out.println ("6");
+                } else if (fullname.equals("Mike Keough")) {
+                    bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.mkeough);
+//                System.out.println ("7");
+                }
+
+                intent.putExtra(MainActivity.EXTRA_MESSAGE, bitmap);
+                intent.putExtra("fullname", fullname);
+                intent.putExtra("party", party);
+                startActivity(intent);
+            } else {
+                Intent intent1 = new Intent(this, MainToZip.class);
+                intent1.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                intent1.putExtra("zip", zip);
+                startActivity(intent1);
+            }
         } else {
             super.onMessageReceived( messageEvent );
         }

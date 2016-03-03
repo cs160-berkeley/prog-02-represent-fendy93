@@ -1,5 +1,6 @@
 package com.android.candid;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
@@ -11,13 +12,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.content.Intent;
 
 /**
  * Created by fendyzhou on 3/1/16.
  */
 public class SwipeAdapter1 extends PagerAdapter {
     private int[] image_resources1 = {R.mipmap.map_logo, R.mipmap.usa_logo};
-    private String[] text_resources1 = {"ZIP Code: 76768"};
+    private String[] text_resources1 = {"ZIP Code: 76768", "ZIP Code: 94703", "ZIP Code: 55233", "ZIP Code: 99999"};
     private Context ctx;
     private LayoutInflater layoutInflater;
 
@@ -41,8 +43,13 @@ public class SwipeAdapter1 extends PagerAdapter {
         final ImageView imageView = (ImageView) item_view.findViewById(R.id.zip_img);
         final TextView textView = (TextView) item_view.findViewById(R.id.zip_text);
         final TextView textView1 = (TextView) item_view.findViewById(R.id.zip_tap);
-        final int p = position;
+        int p = position;
         if (position == 0) {
+            Intent intent = ((Activity) ctx).getIntent();
+            final String count = intent.getStringExtra("new zipcode");
+            if (!(count.isEmpty())) {
+                p = Integer.parseInt(count);
+            }
             textView.setText(text_resources1[p]);
             textView1.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
