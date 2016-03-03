@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.candid"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="22"
+        android:targetSdkVersion="23" />
+
+    <uses-feature android:name="android.hardware.type.watch" />
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/i_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@android:style/Theme.DeviceDefault" >
+        <uses-library
+            android:name="com.google.android.wearable"
+            android:required="false" />
+
+        <activity
+            android:name="com.android.candid.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.candid.PressResult"
+            android:label="@string/app_name"
+            android:parentActivityName="com.android.candid.SwipeLayout" >
+            <intent-filter>
+                <action android:name="com.android.candid.PressResult" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.candid.CurrDetails"
+            android:label="@string/app_name"
+            android:parentActivityName="com.android.candid.SwipeLayout" >
+            <intent-filter>
+                <action android:name="com.android.candid.PressResult" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.candid.PressResult1"
+            android:label="@string/app_name"
+            android:parentActivityName="com.android.candid.SwipeLayout" >
+            <intent-filter>
+                <action android:name="com.android.candid.PressResult" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.candid.ZipDetails"
+            android:label="@string/app_name"
+            android:parentActivityName="com.android.candid.SwipeLayout" >
+            <intent-filter>
+                <action android:name="com.android.candid.PressResult" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.candid.SwipeLayout"
+            android:label="@string/app_name"
+            android:parentActivityName="com.android.candid.MainActivity" >
+            <intent-filter>
+                <action android:name="com.android.candid.PressResult" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.android.candid.SwipeLayout1"
+            android:label="@string/app_name"
+            android:parentActivityName="com.android.candid.MainActivity" >
+            <intent-filter>
+                <action android:name="com.android.candid.PressResult" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service android:name="com.android.candid.WatchToPhoneService" />
+        <!-- Listeners are special services that need to be declared like below, as BIND_LISTENER -->
+        <service
+            android:name="com.android.candid.WatchListenerService"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.google.android.gms.wearable.BIND_LISTENER" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name="android.support.v7.widget.TestActivity"
+            android:label="RecyclerViewTestActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/drawable/common_signin_btn_icon_light.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.1.0/res/drawable/common_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/drawable/common_signin_btn_text_light.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.1.0/res/drawable/common_signin_btn_text_light.xml"
+    },
+    {
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/drawable/common_signin_btn_icon_dark.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.1.0/res/drawable/common_signin_btn_icon_dark.xml"
+    },
+    {
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/drawable/common_signin_btn_text_dark.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.1.0/res/drawable/common_signin_btn_text_dark.xml"
+    },
+    {
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/drawable/close_button.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.support/wearable/1.3.0/res/drawable/close_button.xml"
+    },
+    {
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/drawable/card_background.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.support/wearable/1.3.0/res/drawable/card_background.xml"
+    }
+]
