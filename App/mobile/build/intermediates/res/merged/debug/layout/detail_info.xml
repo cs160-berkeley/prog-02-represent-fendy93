@@ -77,8 +77,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="January 3, 2017"
-                android:id="@+id/textView49" />
+                android:text="Null"
+                android:id="@+id/text_end_date" />
         </LinearLayout>
 
         <LinearLayout
@@ -95,34 +95,11 @@
                 android:textStyle="bold"
                 android:padding="5dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="- Appropiation Committee"
-                android:id="@+id/textView51"
-                android:paddingLeft="40dp"
-                android:paddingBottom="5dp" />
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="153dp"
+                android:id="@+id/listView_ac" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="- Health, Education, Labor, and Pension"
-                android:id="@+id/textView52"
-                android:paddingLeft="40dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="- Select Committee Intelligence"
-                android:id="@+id/textView53"
-                android:paddingLeft="40dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -139,44 +116,11 @@
                 android:textStyle="bold"
                 android:padding="5dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="- (02/04/16): A resolution relative to the death of Marlow Cook."
-                android:id="@+id/textView55"
-                android:paddingLeft="40dp"
-                android:paddingBottom="5dp" />
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="171dp"
+                android:id="@+id/listView_rb" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="- (02/03/16): A resolution “National School Counseling Week”."
-                android:id="@+id/textView56"
-                android:paddingLeft="40dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="- (01/28/16): A resolution commemorating the 30th anniversary of the loss of the Space Shuttle Challenger and of Teacher in Space S. Christa McAuliffe of Concord, New Hampshire."
-                android:id="@+id/textView57"
-                android:paddingLeft="40dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:text="- (01/20/16): A resolution honoring the memory and legacy of Anita Ashok Datar and condemn ing the terrorist attack in Bamako, Mali, on November 20, 2015."
-                android:id="@+id/textView58"
-                android:paddingLeft="40dp"
-                android:paddingTop="5dp"
-                android:paddingBottom="5dp" />
         </LinearLayout>
 
     </LinearLayout>

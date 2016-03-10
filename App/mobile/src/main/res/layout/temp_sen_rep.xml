@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <ImageButton
+            android:layout_width="100dp"
+            android:layout_height="90dp"
+            android:id="@+id/imageButton_rep_sen"
+            android:scaleType="fitXY"
+            android:background="#ffffff"
+            android:layout_gravity="center_vertical"
+            android:src="#000000" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Name"
+                android:id="@+id/name_rep_sen"
+                android:paddingBottom="5dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Party"
+                android:id="@+id/party_sen_rep"
+                android:paddingBottom="5dp"
+                android:textColor="#ff0000" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView_web_rep_sen"
+                    android:src="@mipmap/com_logo"
+                    android:paddingBottom="10dp"
+                    android:scaleType="fitCenter" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/imageView_mail_rep_sen"
+                    android:src="@mipmap/mails_logo"
+                    android:paddingBottom="10dp"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="More Info"
+                android:id="@+id/more_rep_sen"
+                android:paddingBottom="5dp"
+                android:textColor="#3a3f9d" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:id="@+id/twitter">
+
+            <!--<com.twitter.sdk.android.tweetui.TweetView-->
+                <!--xmlns:twittersdk="http://schemas.android.com/apk/res-auto"-->
+                <!--android:id="@+id/default_twitter"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--twittersdk:tw__tweet_id="707328209700913152" />-->
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/textView17"
+                android:background="#acacac" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

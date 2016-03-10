@@ -26,6 +26,10 @@
         </service>
 
         <activity
+            android:name=".MapsActivity"
+            android:label = "@string/app_name"/>
+
+        <activity
             android:name=".MainToZip"
             android:label = "@string/app_name"
             android:parentActivityName="com.android.candid.MainActivity">
@@ -38,7 +42,7 @@
         <activity
             android:name=".MainToCurrent"
             android:label = "@string/app_name"
-            android:parentActivityName="com.android.candid.MainActivity">
+            android:parentActivityName="com.android.candid.MapsActivity">
             <intent-filter>
                 <action android:name="com.android.candid.MainToCurrent" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -54,7 +58,28 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
 
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="a7716c1e470072fe8191afc8847f5eee27c0c334" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAgnbqH8LjpFazsepceovZDfw2ZUNhykis"/>
     </application>
 
+    <!--<manifest xmlns:android="http://schemas.android.com/apk/res/android"-->
+        <!--package="com.google.android.gms.location.sample.basiclocationsample" >-->
+
+        <!--<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>-->
+    <!--</manifest>-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>

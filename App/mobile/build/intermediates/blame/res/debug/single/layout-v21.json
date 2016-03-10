@@ -1,6 +1,6 @@
 [
     {
-        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/res/merged/debug/layout-v21/place_autocomplete_fragment.xml",
-        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout-v21/place_autocomplete_fragment.xml"
+        "merged": "/Users/Fendy/Desktop/App/mobile/build/intermediates/res/merged/debug/layout-v21/place_autocomplete_fragment.xml",
+        "source": "/Users/Fendy/Desktop/App/mobile/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/8.4.0/res/layout-v21/place_autocomplete_fragment.xml"
     }
 ]

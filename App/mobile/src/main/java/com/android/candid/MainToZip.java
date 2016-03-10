@@ -3,6 +3,7 @@ package com.android.candid;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -10,12 +11,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainToZip extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.android.candid.MESSAGE";
+    private List<Info> infos = new ArrayList<Info>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -55,266 +64,143 @@ public class MainToZip extends AppCompatActivity {
         tabSpec.setIndicator("Representative");
         tabhost.addTab(tabSpec);
 
-        ImageView jc_img = (ImageView)findViewById(R.id.jc_img);
-        jc_img.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.john_corney);
-                Intent intent = new Intent("com.android.candid.CurrentToDetail");
-                intent.setClass(MainToZip.this, CurrentToDetail.class);
-                intent.putExtra(EXTRA_MESSAGE, bitmap);
+        populateInfoList();
+        populateViewList();
+    }
 
-                TextView editText = (TextView) findViewById(R.id.jc_name);
-                String message = editText.getText().toString();
-                intent.putExtra("fullname", message);
+    private void populateInfoList() {
+//        for(int i = 0; i < 5; i++){
+//            infos.add(new Info("Barbara Mikulski", "Democrat", R.mipmap.bmikulski, R.mipmap.com_logo, R.mipmap.mails_logo, "More Info"));
+//        }
+        ArrayList<String> activeComittee = new ArrayList<String>();
+        activeComittee.add("h");
+        activeComittee.add("i");
+        activeComittee.add("j");
 
-                TextView editText1 = (TextView) findViewById(R.id.jc_party);
-                String message1 = editText1.getText().toString();
-                intent.putExtra("party", message1);
+        ArrayList<String> recentBills = new ArrayList<String>();
+        activeComittee.add("k");
+        activeComittee.add("l");
+        activeComittee.add("m");
 
-                startActivity(intent);
+        infos.add(new Info("Barbara Boxer", "Democrat", R.mipmap.blee, R.mipmap.com_logo, R.mipmap.mails_logo, "More Info", "@blee: Happy Birthday!", "January 10, 2026", activeComittee, recentBills));
+    }
+
+    private void populateViewList() {
+        ArrayAdapter<Info> adapter = new MyListAdapter();
+        ListView list = (ListView) findViewById(R.id.listView_zip_rep);
+        ListView list1 = (ListView) findViewById(R.id.listView_zip_sen);
+        list.setAdapter(adapter);
+        list1.setAdapter(adapter);
+    }
+
+    private class MyListAdapter extends ArrayAdapter<Info> {
+        public MyListAdapter() {
+            super(MainToZip.this, R.layout.temp_sen_rep, infos);
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            View itemView = convertView;
+            if (itemView == null) {
+                itemView = getLayoutInflater().inflate(R.layout.temp_sen_rep, parent, false);
             }
-        });
 
-        TextView jc_text = (TextView)findViewById(R.id.jc_text);
-        jc_text.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.john_corney);
-                Intent intent = new Intent("com.android.candid.CurrentToDetail");
-                intent.setClass(MainToZip.this, CurrentToDetail.class);
-                intent.putExtra(EXTRA_MESSAGE, bitmap);
+            final Info currentInfo = infos.get(position);
 
-                TextView editText = (TextView) findViewById(R.id.jc_name);
-                String message = editText.getText().toString();
-                intent.putExtra("fullname", message);
+            ImageButton imageButton = (ImageButton)itemView.findViewById(R.id.imageButton_rep_sen);
+            imageButton.setImageResource(currentInfo.getImg());
 
-                TextView editText1 = (TextView) findViewById(R.id.jc_party);
-                String message1 = editText1.getText().toString();
-                intent.putExtra("party", message1);
+            TextView textName = (TextView)itemView.findViewById(R.id.name_rep_sen);
+            textName.setText(currentInfo.getName());
 
-                startActivity(intent);
+            TextView textParty = (TextView)itemView.findViewById(R.id.party_sen_rep);
+            if (currentInfo.getParty() == "Democrat") {
+                textParty.setTextColor(Color.parseColor("#0008ff"));
+            } else if(currentInfo.getParty() == "Republic") {
+                textParty.setTextColor(Color.parseColor("#ff0000"));
             }
-        });
 
-        ImageView jc_web = (ImageView)findViewById(R.id.jc_web);
-        jc_web.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.cornyn.senate.gov/"));
-                startActivity(intent);
-            }
-        });
+            textParty.setText(currentInfo.getParty());
 
-        ImageView jc_email = (ImageView)findViewById(R.id.jc_contact);
-        jc_email.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.cornyn.senate.gov/contact"));
-                startActivity(intent);
-            }
-        });
+            ImageView imageWeb = (ImageView)itemView.findViewById(R.id.imageView_web_rep_sen);
+            imageWeb.setImageResource(currentInfo.getWeb());
+            imageWeb.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent intent = new Intent();
+                    intent.setAction(Intent.ACTION_VIEW);
+                    intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                    intent.setData(Uri.parse("http://www.mikulski.senate.gov/"));
+                    startActivity(intent);
+                }
+            });
 
+            ImageView imageMail = (ImageView)itemView.findViewById(R.id.imageView_mail_rep_sen);
+            imageMail.setImageResource(currentInfo.getEmail());
+            imageMail.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent intent = new Intent();
+                    intent.setAction(Intent.ACTION_VIEW);
+                    intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                    intent.setData(Uri.parse("http://www.mikulski.senate.gov/"));
+                    startActivity(intent);
+                }
+            });
 
+            TextView textMore = (TextView)itemView.findViewById(R.id.more_rep_sen);
+            textMore.setText(currentInfo.getmoreInfo());
 
+//            TextView textTweet = (TextView)itemView.findViewById(R.id.textView_tweet);
+//            textTweet.setText(currentInfo.getTweet());
 
-        ImageView tcruz_img = (ImageView)findViewById(R.id.tcruz_img);
-        tcruz_img.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.t_cruz);
-                Intent intent = new Intent("com.android.candid.CurrentToDetail");
-                intent.setClass(MainToZip.this, CurrentToDetail.class);
-                intent.putExtra(EXTRA_MESSAGE, bitmap);
+            imageButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Bitmap bitmap = BitmapFactory.decodeResource(getResources(), currentInfo.getImg());
+                    Intent intent = new Intent("com.android.candid.CurrentToDetail");
+                    intent.setClass(MainToZip.this, CurrentToDetail.class);
+                    intent.putExtra(EXTRA_MESSAGE, bitmap);
 
-                TextView editText = (TextView) findViewById(R.id.tcruz_name);
-                String message = editText.getText().toString();
-                intent.putExtra("fullname", message);
+                    TextView editText = (TextView) findViewById(R.id.name_rep_sen);
+                    String message = editText.getText().toString();
+                    intent.putExtra("fullname", currentInfo.getName());
 
-                TextView editText1 = (TextView) findViewById(R.id.tcruz_party);
-                String message1 = editText1.getText().toString();
-                intent.putExtra("party", message1);
+                    TextView editText1 = (TextView) findViewById(R.id.party_sen_rep);
+                    String message1 = editText1.getText().toString();
+                    intent.putExtra("party", currentInfo.getParty());
 
-                startActivity(intent);
-            }
-        });
+                    String endDate = currentInfo.getEndDate();
+                    intent.putExtra("enddate", currentInfo.getEndDate());
 
-        TextView tcruz_text = (TextView)findViewById(R.id.tcruz_text);
-        tcruz_text.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.t_cruz);
-                Intent intent = new Intent("com.android.candid.CurrentToDetail");
-                intent.setClass(MainToZip.this, CurrentToDetail.class);
-                intent.putExtra(EXTRA_MESSAGE, bitmap);
+                    startActivity(intent);
+                }
+            });
 
-                TextView editText = (TextView) findViewById(R.id.tcruz_name);
-                String message = editText.getText().toString();
-                intent.putExtra("fullname", message);
+            textMore.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Bitmap bitmap = BitmapFactory.decodeResource(getResources(), currentInfo.getImg());
+                    Intent intent = new Intent("com.android.candid.CurrentToDetail");
+                    intent.setClass(MainToZip.this, CurrentToDetail.class);
+                    intent.putExtra(EXTRA_MESSAGE, bitmap);
 
-                TextView editText1 = (TextView) findViewById(R.id.tcruz_party);
-                String message1 = editText1.getText().toString();
-                intent.putExtra("party", message1);
+                    TextView editText = (TextView) findViewById(R.id.name_rep_sen);
+                    String message = editText.getText().toString();
+                    intent.putExtra("fullname", currentInfo.getName());
 
-                startActivity(intent);
-            }
-        });
+                    TextView editText1 = (TextView) findViewById(R.id.party_sen_rep);
+                    String message1 = editText1.getText().toString();
+                    intent.putExtra("party", currentInfo.getParty());
 
-        ImageView tcruz_web = (ImageView)findViewById(R.id.tcruz_web);
-        tcruz_web.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.cruz.senate.gov/"));
-                startActivity(intent);
-            }
-        });
+                    String endDate = currentInfo.getEndDate();
+                    intent.putExtra("enddate", currentInfo.getEndDate());
 
-        ImageView tcruz_email = (ImageView)findViewById(R.id.tcruz_contact);
-        tcruz_email.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.cruz.senate.gov/?p=email_senator"));
-                startActivity(intent);
-            }
-        });
+                    startActivity(intent);
+                }
+            });
 
 
-
-
-
-        ImageView lm_img = (ImageView)findViewById(R.id.lm_img);
-        lm_img.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.lsmith);
-                Intent intent = new Intent("com.android.candid.CurrentToDetail");
-                intent.setClass(MainToZip.this, CurrentToDetail.class);
-                intent.putExtra(EXTRA_MESSAGE, bitmap);
-
-                TextView editText = (TextView) findViewById(R.id.lm_name);
-                String message = editText.getText().toString();
-                intent.putExtra("fullname", message);
-
-                TextView editText1 = (TextView) findViewById(R.id.lm_party);
-                String message1 = editText1.getText().toString();
-                intent.putExtra("party", message1);
-
-                startActivity(intent);
-            }
-        });
-
-        TextView lm_text = (TextView)findViewById(R.id.lm_text);
-        lm_text.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.lsmith);
-                Intent intent = new Intent("com.android.candid.CurrentToDetail");
-                intent.setClass(MainToZip.this, CurrentToDetail.class);
-                intent.putExtra(EXTRA_MESSAGE, bitmap);
-
-                TextView editText = (TextView) findViewById(R.id.lm_name);
-                String message = editText.getText().toString();
-                intent.putExtra("fullname", message);
-
-                TextView editText1 = (TextView) findViewById(R.id.lm_party);
-                String message1 = editText1.getText().toString();
-                intent.putExtra("party", message1);
-
-                startActivity(intent);
-            }
-        });
-
-        ImageView lm_web = (ImageView)findViewById(R.id.lm_web);
-        lm_web.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://lamarsmith.house.gov/"));
-                startActivity(intent);
-            }
-        });
-
-        ImageView lm_email = (ImageView)findViewById(R.id.lm_contact);
-        lm_email.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://lamarsmith.house.gov/contact"));
-                startActivity(intent);
-            }
-        });
-
-
-
-
-
-
-        ImageView mk_img = (ImageView)findViewById(R.id.mk_img);
-        mk_img.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.mkeough);
-                Intent intent = new Intent("com.android.candid.CurrentToDetail");
-                intent.setClass(MainToZip.this, CurrentToDetail.class);
-                intent.putExtra(EXTRA_MESSAGE, bitmap);
-
-                TextView editText = (TextView) findViewById(R.id.mk_name);
-                String message = editText.getText().toString();
-                intent.putExtra("fullname", message);
-
-                TextView editText1 = (TextView) findViewById(R.id.mk_party);
-                String message1 = editText1.getText().toString();
-                intent.putExtra("party", message1);
-
-                startActivity(intent);
-            }
-        });
-
-        TextView mk_text = (TextView)findViewById(R.id.mk_text);
-        mk_text.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.mkeough);
-                Intent intent = new Intent("com.android.candid.CurrentToDetail");
-                intent.setClass(MainToZip.this, CurrentToDetail.class);
-                intent.putExtra(EXTRA_MESSAGE, bitmap);
-
-                TextView editText = (TextView) findViewById(R.id.mk_name);
-                String message = editText.getText().toString();
-                intent.putExtra("fullname", message);
-
-                TextView editText1 = (TextView) findViewById(R.id.mk_party);
-                String message1 = editText1.getText().toString();
-                intent.putExtra("party", message1);
-
-                startActivity(intent);
-            }
-        });
-
-        ImageView mk_web = (ImageView)findViewById(R.id.mk_web);
-        mk_web.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.house.state.tx.us/members/member-page/?district=15"));
-                startActivity(intent);
-            }
-        });
-
-        ImageView mk_email = (ImageView)findViewById(R.id.mk_contact);
-        mk_email.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.house.state.tx.us/members/member-page/email/?district=15&session=84"));
-                startActivity(intent);
-            }
-        });
-
+            return itemView;
+        }
     }
 
     @Override
