@@ -60,7 +60,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
-        mMap.setMyLocationEnabled(true);
+//        mMap.setMyLocationEnabled(true);
         // Add a marker in Sydney and move the camera
 //        LatLng sydney = new LatLng(-34, 151);
 //        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
@@ -68,36 +68,36 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setOnMyLocationChangeListener(new GoogleMap.OnMyLocationChangeListener() {
             @Override
             public void onMyLocationChange(Location location) {
-                // TODO Auto-generated method stub
-                LatLng loc = new LatLng(location.getLatitude(), location.getLongitude());
-                mMap.addMarker(new MarkerOptions().position(loc));
-                if (mMap != null) {
-                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(loc, 16.0f));
-                }
-                System.out.println("*************");
-                System.out.println("latitude is " + location.getLatitude() + " longtitude is " + location.getLongitude());
-                curLongitude = location.getLongitude();
-                curLatitude = location.getLatitude();
-                // System.out.println("Get county " + getCounty());
-                System.out.println("insite the county");
+            // TODO Auto-generated method stub
+            LatLng loc = new LatLng(location.getLatitude(), location.getLongitude());
+            mMap.addMarker(new MarkerOptions().position(loc));
+            if (mMap != null) {
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(loc, 16.0f));
+            }
+            System.out.println("*************");
+            System.out.println("latitude is " + location.getLatitude() + " longtitude is " + location.getLongitude());
+            curLongitude = location.getLongitude();
+            curLatitude = location.getLatitude();
+            // System.out.println("Get county " + getCounty());
+            System.out.println("insite the county");
 
-                Geocoder gcd = new Geocoder(getApplicationContext());
-                try {
-                    List<Address> addresses = gcd.getFromLocation(curLatitude, curLongitude, 1);
-                    getVote(addresses.get(0).getAdminArea());
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-//              String helloworld = "http://congress.api.sunlightfoundation.com/legislators/locate?latitude=37.8715916&longitude=-122.2727466&apikey=e8bcea73983e4f2196d97f668a85dbde";
-                String helloworld1 = "http://congress.api.sunlightfoundation.com/legislators/locate?zip=94703&apikey=e8bcea73983e4f2196d97f668a85dbde";
-                SunLightHTTP k3 = new SunLightHTTP();
-                System.out.println("Hellol");
-                result = k3.execute(helloworld1).toString();
-//                String result2 = k3.execute(helloworld1).toString();
-                System.out.println(result);
-                System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%");
-//                System.out.println(result2);
-                System.out.println("After PARSING JSON RESULT!!!!!!!!");
+//            Geocoder gcd = new Geocoder(getApplicationContext());
+//            try {
+//                List<Address> addresses = gcd.getFromLocation(curLatitude, curLongitude, 1);
+//                getVote(addresses.get(0).getAdminArea());
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+////              String helloworld = "http://congress.api.sunlightfoundation.com/legislators/locate?latitude=37.8715916&longitude=-122.2727466&apikey=e8bcea73983e4f2196d97f668a85dbde";
+//            String helloworld1 = "http://congress.api.sunlightfoundation.com/legislators/locate?zip=94703&apikey=e8bcea73983e4f2196d97f668a85dbde";
+////            SunLightHTTP k3 = new SunLightHTTP();
+//            System.out.println("Hellol");
+////            result = k3.execute("abc").toString();
+////                String result2 = k3.execute(helloworld1).toString();
+//            System.out.println(result);
+//            System.out.println("%%%%%%%%%%%%%%%%%%%%%%%%");
+////                System.out.println(result2);
+//            System.out.println("After PARSING JSON RESULT!!!!!!!!");
             }
         });
 

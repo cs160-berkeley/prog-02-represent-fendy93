@@ -53,13 +53,16 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:dividerPadding="0dp"
+            android:divider="#f7f7f7">
 
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"></TabWidget>
+                android:paddingTop="10dp"
+                android:dividerPadding="0dp"></TabWidget>
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
@@ -71,7 +74,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_gravity="left|center_vertical">
+                    android:layout_gravity="left|center_vertical"
+                    android:dividerPadding="0dp"
+                    android:divider="#f7f7f7">
 
                     <ListView
                         android:layout_width="match_parent"
@@ -85,7 +90,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
-                    android:layout_gravity="left|center_vertical">
+                    android:layout_gravity="left|center_vertical"
+                    android:divider="#f7f7f7">
 
                     <ListView
                         android:layout_width="match_parent"

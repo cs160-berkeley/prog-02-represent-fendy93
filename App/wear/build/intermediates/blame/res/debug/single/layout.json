@@ -1,54 +1,54 @@
 [
     {
-        "merged": "/Users/Fendy/Desktop/App/wear/build/intermediates/res/merged/debug/layout/detail_senate.xml",
-        "source": "/Users/Fendy/Desktop/App/wear/src/main/res/layout/detail_senate.xml"
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/layout/swipe_layout.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/res/layout/swipe_layout.xml"
     },
     {
-        "merged": "/Users/Fendy/Desktop/App/wear/build/intermediates/res/merged/debug/layout/alert_dialog_wearable.xml",
-        "source": "/Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.google.android.support/wearable/1.3.0/res/layout/alert_dialog_wearable.xml"
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/layout/zip_senate.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/res/layout/zip_senate.xml"
     },
     {
-        "merged": "/Users/Fendy/Desktop/App/wear/build/intermediates/res/merged/debug/layout/swipe_layout.xml",
-        "source": "/Users/Fendy/Desktop/App/wear/src/main/res/layout/swipe_layout.xml"
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/layout/curr_senate.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/res/layout/curr_senate.xml"
     },
     {
-        "merged": "/Users/Fendy/Desktop/App/wear/build/intermediates/res/merged/debug/layout/zip_location.xml",
-        "source": "/Users/Fendy/Desktop/App/wear/src/main/res/layout/zip_location.xml"
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/layout/detail_curr.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/res/layout/detail_curr.xml"
     },
     {
-        "merged": "/Users/Fendy/Desktop/App/wear/build/intermediates/res/merged/debug/layout/curr_location.xml",
-        "source": "/Users/Fendy/Desktop/App/wear/src/main/res/layout/curr_location.xml"
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/layout/alert_dialog_wearable.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.support/wearable/1.3.0/res/layout/alert_dialog_wearable.xml"
     },
     {
-        "merged": "/Users/Fendy/Desktop/App/wear/build/intermediates/res/merged/debug/layout/presidential_result1.xml",
-        "source": "/Users/Fendy/Desktop/App/wear/src/main/res/layout/presidential_result1.xml"
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/layout/curr_location.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/res/layout/curr_location.xml"
     },
     {
-        "merged": "/Users/Fendy/Desktop/App/wear/build/intermediates/res/merged/debug/layout/activity_main.xml",
-        "source": "/Users/Fendy/Desktop/App/wear/src/main/res/layout/activity_main.xml"
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/layout/detail_senate.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/res/layout/detail_senate.xml"
     },
     {
-        "merged": "/Users/Fendy/Desktop/App/wear/build/intermediates/res/merged/debug/layout/error_layout.xml",
-        "source": "/Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.google.android.support/wearable/1.3.0/res/layout/error_layout.xml"
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/layout/presidential_result.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/res/layout/presidential_result.xml"
     },
     {
-        "merged": "/Users/Fendy/Desktop/App/wear/build/intermediates/res/merged/debug/layout/curr_senate.xml",
-        "source": "/Users/Fendy/Desktop/App/wear/src/main/res/layout/curr_senate.xml"
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/layout/zip_location.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/res/layout/zip_location.xml"
     },
     {
-        "merged": "/Users/Fendy/Desktop/App/wear/build/intermediates/res/merged/debug/layout/detail_curr.xml",
-        "source": "/Users/Fendy/Desktop/App/wear/src/main/res/layout/detail_curr.xml"
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/layout/presidential_result1.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/res/layout/presidential_result1.xml"
     },
     {
-        "merged": "/Users/Fendy/Desktop/App/wear/build/intermediates/res/merged/debug/layout/zip_senate.xml",
-        "source": "/Users/Fendy/Desktop/App/wear/src/main/res/layout/zip_senate.xml"
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/layout/error_layout.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.support/wearable/1.3.0/res/layout/error_layout.xml"
     },
     {
-        "merged": "/Users/Fendy/Desktop/App/wear/build/intermediates/res/merged/debug/layout/presidential_result.xml",
-        "source": "/Users/Fendy/Desktop/App/wear/src/main/res/layout/presidential_result.xml"
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/layout/swipe_layout1.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/res/layout/swipe_layout1.xml"
     },
     {
-        "merged": "/Users/Fendy/Desktop/App/wear/build/intermediates/res/merged/debug/layout/swipe_layout1.xml",
-        "source": "/Users/Fendy/Desktop/App/wear/src/main/res/layout/swipe_layout1.xml"
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/layout/activity_main.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/res/layout/activity_main.xml"
     }
 ]

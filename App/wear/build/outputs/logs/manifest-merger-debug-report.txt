@@ -1,158 +1,158 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:2:1-98:12
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:2:1-98:12
 	package
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:3:5-33
-		INJECTED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml
-		INJECTED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:3:5-33
+		INJECTED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml
+		INJECTED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml
-		INJECTED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml
+		INJECTED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml
+		INJECTED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:2:11-69
 	android:versionCode
-		INJECTED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml
-		INJECTED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml
+		INJECTED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml
+		INJECTED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml
 uses-feature#android.hardware.type.watch
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:5:5-64
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:5:5-64
 	android:name
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:5:19-61
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:5:19-61
 uses-permission#android.permission.WAKE_LOCK
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:7:5-68
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:7:5-68
 	android:name
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:7:22-65
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:7:22-65
 application
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:9:5-96:19
-MERGED from [com.google.android.support:wearable:1.3.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.google.android.support/wearable/1.3.0/AndroidManifest.xml:8:5-20
-MERGED from [com.android.support:recyclerview-v7:22.0.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.0.0/AndroidManifest.xml:22:5-26:19
-MERGED from [com.android.support:support-v4:22.2.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:22.2.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-wearable:8.1.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/8.1.0/AndroidManifest.xml:19:5-20
-MERGED from [com.google.android.gms:play-services-basement:8.1.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:20:5-24:19
-MERGED from [com.android.support:support-v4:22.2.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:22:5-20
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:9:5-96:19
+MERGED from [com.google.android.support:wearable:1.3.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.support/wearable/1.3.0/AndroidManifest.xml:8:5-20
+MERGED from [com.android.support:recyclerview-v7:22.0.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.0.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.android.support:support-v4:22.2.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:22.2.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-wearable:8.1.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/8.1.0/AndroidManifest.xml:19:5-20
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.android.support:support-v4:22.2.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:22:5-20
 	android:label
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:12:9-41
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:12:9-41
 	android:supportsRtl
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:13:9-35
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:13:9-35
 	android:allowBackup
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:10:9-35
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:10:9-35
 	android:icon
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:11:9-38
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:11:9-38
 	android:theme
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:14:9-59
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:14:9-59
 uses-library#com.google.android.wearable
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:15:9-17:40
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:15:9-17:40
 	android:required
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:17:13-37
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:17:13-37
 	android:name
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:16:13-55
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:16:13-55
 activity#com.android.candid.PressResult
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:19:9-25:20
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:19:9-25:20
 	android:label
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:20:13-47
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:20:13-47
 	android:name
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:19:19-46
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:19:19-46
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:21:13-24:29
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:21:13-24:29
 action#android.intent.action.MAIN
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:22:17-69
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:22:17-69
 	android:name
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:22:25-66
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:22:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:23:17-77
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:23:17-77
 	android:name
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:23:27-74
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:23:27-74
 activity#com.android.candid.CurrDetails
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:37:9-45:20
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:37:9-45:20
 	android:label
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:39:13-47
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:39:13-47
 	android:parentActivityName
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:40:13-72
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:40:13-72
 	android:name
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:38:13-40
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:38:13-40
 intent-filter#android.intent.category.DEFAULT+com.android.candid.PressResult
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:41:13-44:29
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:41:13-44:29
 action#com.android.candid.PressResult
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:42:17-73
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:42:17-73
 	android:name
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:42:25-70
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:42:25-70
 category#android.intent.category.DEFAULT
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:43:17-76
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:43:17-76
 	android:name
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:43:27-73
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:43:27-73
 activity#com.android.candid.PressResult1
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:47:9-55:20
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:47:9-55:20
 	android:label
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:49:13-47
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:49:13-47
 	android:parentActivityName
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:50:13-72
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:50:13-72
 	android:name
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:48:13-41
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:48:13-41
 activity#com.android.candid.ZipDetails
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:57:9-65:20
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:57:9-65:20
 	android:label
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:59:13-47
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:59:13-47
 	android:parentActivityName
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:60:13-72
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:60:13-72
 	android:name
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:58:13-39
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:58:13-39
 activity#com.android.candid.SwipeLayout
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:67:9-75:20
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:67:9-75:20
 	android:label
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:69:13-47
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:69:13-47
 	android:parentActivityName
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:70:13-73
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:70:13-73
 	android:name
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:68:13-40
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:68:13-40
 activity#com.android.candid.SwipeLayout1
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:77:9-85:20
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:77:9-85:20
 	android:label
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:79:13-47
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:79:13-47
 	android:parentActivityName
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:80:13-73
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:80:13-73
 	android:name
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:78:13-41
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:78:13-41
 service#com.android.candid.WatchToPhoneService
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:87:9-56
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:87:9-56
 	android:name
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:87:18-53
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:87:18-53
 service#com.android.candid.WatchListenerService
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:89:9-94:19
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:89:9-94:19
 	android:label
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:90:13-45
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:90:13-45
 	android:name
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:89:18-54
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:89:18-54
 intent-filter#com.google.android.gms.wearable.BIND_LISTENER
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:91:13-93:29
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:91:13-93:29
 action#com.google.android.gms.wearable.BIND_LISTENER
-ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:92:17-88
+ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:92:17-88
 	android:name
-		ADDED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml:92:25-85
+		ADDED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml:92:25-85
 uses-sdk
-INJECTED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml reason: use-sdk injection requested
-MERGED from [com.google.android.support:wearable:1.3.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.google.android.support/wearable/1.3.0/AndroidManifest.xml:4:5-6:41
-MERGED from [com.android.support:recyclerview-v7:22.0.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.0.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:22.2.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:22.2.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:20:5-43
-MERGED from [com.google.android.gms:play-services-wearable:8.1.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/8.1.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-base:8.1.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.1.0/AndroidManifest.xml:18:5-42
-MERGED from [com.google.android.gms:play-services-basement:8.1.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:18:5-42
-MERGED from [com.android.support:support-v4:22.2.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:20:5-43
+INJECTED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml reason: use-sdk injection requested
+MERGED from [com.google.android.support:wearable:1.3.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.support/wearable/1.3.0/AndroidManifest.xml:4:5-6:41
+MERGED from [com.android.support:recyclerview-v7:22.0.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.0.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:22.2.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:22.2.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:20:5-43
+MERGED from [com.google.android.gms:play-services-wearable:8.1.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/8.1.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-base:8.1.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.1.0/AndroidManifest.xml:18:5-42
+MERGED from [com.google.android.gms:play-services-basement:8.1.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:18:5-42
+MERGED from [com.android.support:support-v4:22.2.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/AndroidManifest.xml:20:5-43
 	android:targetSdkVersion
-		INJECTED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml
-		INJECTED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml
+		INJECTED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml
+		INJECTED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml
-		INJECTED from /Users/Fendy/Desktop/App/wear/src/main/AndroidManifest.xml
+		INJECTED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml
+		INJECTED from /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/AndroidManifest.xml
 activity#android.support.v7.widget.TestActivity
-ADDED from [com.android.support:recyclerview-v7:22.0.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.0.0/AndroidManifest.xml:23:9-25:56
+ADDED from [com.android.support:recyclerview-v7:22.0.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.0.0/AndroidManifest.xml:23:9-25:56
 	android:label
-		ADDED from [com.android.support:recyclerview-v7:22.0.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.0.0/AndroidManifest.xml:25:13-53
+		ADDED from [com.android.support:recyclerview-v7:22.0.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.0.0/AndroidManifest.xml:25:13-53
 	android:name
-		ADDED from [com.android.support:recyclerview-v7:22.0.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.0.0/AndroidManifest.xml:24:13-66
+		ADDED from [com.android.support:recyclerview-v7:22.0.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.0.0/AndroidManifest.xml:24:13-66
 meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:8.1.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:21:9-23:69
+ADDED from [com.google.android.gms:play-services-basement:8.1.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:21:9-23:69
 	android:value
-		ADDED from [com.google.android.gms:play-services-basement:8.1.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:23:13-66
+		ADDED from [com.google.android.gms:play-services-basement:8.1.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:23:13-66
 	android:name
-		ADDED from [com.google.android.gms:play-services-basement:8.1.0] /Users/Fendy/Desktop/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:22:13-58
+		ADDED from [com.google.android.gms:play-services-basement:8.1.0] /Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.1.0/AndroidManifest.xml:22:13-58

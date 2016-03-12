@@ -11,8 +11,7 @@ import java.util.List;
 public class Info {
     private String name;
     private String party;
-    private int img;
-    private int web;
+    private String web;
     private int email;
     private String moreInfo;
     private String tweet;
@@ -20,11 +19,10 @@ public class Info {
     private ArrayList<String> activeComittee;
     private ArrayList<String> recentBills;
 
-    public Info(String name, String party, int img, int web, int email, String moreInfo, String tweet, String endDate, ArrayList<String> activeComittee, ArrayList<String> recentBills) {
+    public Info(String name, String party, String web, int email, String moreInfo, String tweet, String endDate, ArrayList<String> activeComittee, ArrayList<String> recentBills) {
         super();
         this.name = name;
         this.party = party;
-        this.img = img;
         this.web = web;
         this.email = email;
         this.moreInfo = moreInfo;
@@ -42,11 +40,7 @@ public class Info {
         return party;
     }
 
-    public int getImg() {
-        return img;
-    }
-
-    public int getWeb() {
+    public String getWeb() {
         return web;
     }
 

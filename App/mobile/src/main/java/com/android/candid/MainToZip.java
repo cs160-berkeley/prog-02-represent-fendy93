@@ -82,7 +82,7 @@ public class MainToZip extends AppCompatActivity {
         activeComittee.add("l");
         activeComittee.add("m");
 
-        infos.add(new Info("Barbara Boxer", "Democrat", R.mipmap.blee, R.mipmap.com_logo, R.mipmap.mails_logo, "More Info", "@blee: Happy Birthday!", "January 10, 2026", activeComittee, recentBills));
+//        infos.add(new Info("Barbara Boxer", "Democrat", R.mipmap.blee, R.mipmap.com_logo, R.mipmap.mails_logo, "More Info", "@blee: Happy Birthday!", "January 10, 2026", activeComittee, recentBills));
     }
 
     private void populateViewList() {
@@ -108,7 +108,7 @@ public class MainToZip extends AppCompatActivity {
             final Info currentInfo = infos.get(position);
 
             ImageButton imageButton = (ImageButton)itemView.findViewById(R.id.imageButton_rep_sen);
-            imageButton.setImageResource(currentInfo.getImg());
+            imageButton.setImageResource(R.mipmap.blee);
 
             TextView textName = (TextView)itemView.findViewById(R.id.name_rep_sen);
             textName.setText(currentInfo.getName());
@@ -123,7 +123,7 @@ public class MainToZip extends AppCompatActivity {
             textParty.setText(currentInfo.getParty());
 
             ImageView imageWeb = (ImageView)itemView.findViewById(R.id.imageView_web_rep_sen);
-            imageWeb.setImageResource(currentInfo.getWeb());
+            imageWeb.setImageResource(R.mipmap.com_logo);
             imageWeb.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Intent intent = new Intent();
@@ -155,7 +155,7 @@ public class MainToZip extends AppCompatActivity {
             imageButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Bitmap bitmap = BitmapFactory.decodeResource(getResources(), currentInfo.getImg());
+                    Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.blee);
                     Intent intent = new Intent("com.android.candid.CurrentToDetail");
                     intent.setClass(MainToZip.this, CurrentToDetail.class);
                     intent.putExtra(EXTRA_MESSAGE, bitmap);
@@ -178,7 +178,7 @@ public class MainToZip extends AppCompatActivity {
             textMore.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Bitmap bitmap = BitmapFactory.decodeResource(getResources(), currentInfo.getImg());
+                    Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.blee);
                     Intent intent = new Intent("com.android.candid.CurrentToDetail");
                     intent.setClass(MainToZip.this, CurrentToDetail.class);
                     intent.putExtra(EXTRA_MESSAGE, bitmap);

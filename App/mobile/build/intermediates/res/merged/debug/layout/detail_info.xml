@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:padding="10dp">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical" android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="#ffffff">
 
     <ImageView
         android:layout_width="150dp"
@@ -27,14 +29,16 @@
                 android:text="Full Name: "
                 android:id="@+id/textView2"
                 android:textStyle="bold"
-                android:padding="5dp" />
+                android:padding="5dp"
+                android:textColor="#000000" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="NULL"
-                android:id="@+id/fname" />
+                android:id="@+id/fname"
+                android:textColor="#000000" />
         </LinearLayout>
 
         <LinearLayout
@@ -49,14 +53,16 @@
                 android:text="Party:"
                 android:id="@+id/textView46"
                 android:textStyle="bold"
-                android:padding="5dp" />
+                android:padding="5dp"
+                android:textColor="#000000" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="NULL"
-                android:id="@+id/pname" />
+                android:id="@+id/pname"
+                android:textColor="#000000" />
         </LinearLayout>
 
         <LinearLayout
@@ -71,14 +77,16 @@
                 android:text="End Date:"
                 android:id="@+id/textView48"
                 android:textStyle="bold"
-                android:padding="5dp" />
+                android:padding="5dp"
+                android:textColor="#000000" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceMedium"
                 android:text="Null"
-                android:id="@+id/text_end_date" />
+                android:id="@+id/text_end_date"
+                android:textColor="#000000" />
         </LinearLayout>
 
         <LinearLayout
@@ -93,12 +101,25 @@
                 android:text="Active Comitee:"
                 android:id="@+id/textView50"
                 android:textStyle="bold"
-                android:padding="5dp" />
+                android:padding="5dp"
+                android:textColor="#000000" />
 
-            <ListView
+            <ScrollView
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="153dp"
-                android:id="@+id/listView_ac" />
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Small Text"
+                    android:id="@+id/acommittee"
+                    android:padding="5dp"
+                    android:textColor="#000000"
+                    android:textSize="10dp"
+                    android:lineSpacingExtra="10dp"/>
+            </ScrollView>
 
         </LinearLayout>
 
@@ -114,12 +135,25 @@
                 android:text="Recent Bills:"
                 android:id="@+id/textView54"
                 android:textStyle="bold"
-                android:padding="5dp" />
+                android:padding="5dp"
+                android:textColor="#000000" />
 
-            <ListView
+            <ScrollView
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="171dp"
-                android:id="@+id/listView_rb" />
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text="Small Text"
+                    android:id="@+id/rbills"
+                    android:padding="5dp"
+                    android:textColor="#000000"
+                    android:textSize="10dp"
+                    android:lineSpacingExtra="10dp"/>
+            </ScrollView>
 
         </LinearLayout>
 
