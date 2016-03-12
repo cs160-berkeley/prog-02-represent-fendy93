@@ -157,11 +157,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 togglePeriodicLocationUpdates();
                 Intent sendIntent = new Intent(getBaseContext(), PhoneToWatchService.class);
                 Intent intent = new Intent(MainActivity.this, MainToCurrent.class);
-//                String lat = Double.toString(latitude);
-//                String lng = Double.toString(longitude);
+                String lat = Double.toString(latitude);
+                String lng = Double.toString(longitude);
 
-                String lat = String.valueOf(37.8716);
-                String lng = String.valueOf(-122.273);
+//                String lat = String.valueOf(37.8716);
+//                String lng = String.valueOf(-122.273);
                 Context context =getApplicationContext();
                 String countyName = null;
 
