@@ -4,6 +4,8 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.location.Address;
+import android.location.Geocoder;
 import android.location.Location;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -38,6 +40,8 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.List;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -158,14 +162,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 String lat = String.valueOf(37.8716);
                 String lng = String.valueOf(-122.273);
+                Context context =getApplicationContext();
+                String countyName = null;
+
+                sendIntent.putExtra("Location", "Current");
+//                startService(sendIntent);
 
                 data.setData(lat, lng);
                 data.execute();
 
 
-                sendIntent.putExtra("latitude", String.valueOf(latitude));
-                sendIntent.putExtra("longitude", String.valueOf(longitude));
-//                startService(sendIntent);
+
                 startActivity(intent);
             }
         });
@@ -178,6 +185,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Matcher matcher = pattern.matcher(zip);
         return matcher.matches();
     }
+
+
 
     //  Uncomment below if no tweet returned
     @Override

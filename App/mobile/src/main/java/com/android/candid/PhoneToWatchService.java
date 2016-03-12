@@ -48,7 +48,7 @@ public class PhoneToWatchService extends Service {
         // Which cat do we want to feed? Grab this info from INTENT
         // which was passed over when we called startService
         Bundle extras = intent.getExtras();
-        final String location = extras.getString("Location");
+        final String location = extras.getString("latitude");
 
         // Send the message with the cat name
         new Thread(new Runnable() {
