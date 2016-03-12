@@ -143,7 +143,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     datazip.execute();
 
                     sendIntent.putExtra("Location", "ZIP");
-//                    startService(sendIntent);
+                    startService(sendIntent);
                     startActivity(intent);
                 }
             }
@@ -166,7 +166,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String countyName = null;
 
                 sendIntent.putExtra("Location", "Current");
-//                startService(sendIntent);
+                startService(sendIntent);
 
                 data.setData(lat, lng);
                 data.execute();
