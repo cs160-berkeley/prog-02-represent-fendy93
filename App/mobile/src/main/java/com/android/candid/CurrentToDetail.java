@@ -157,8 +157,8 @@ public class CurrentToDetail extends AppCompatActivity {
             case android.R.id.home:
                 NavUtils.navigateUpFromSameTask(this);
 
-                data.setData(lat, lng);
-                data.execute();
+                Intent intent = new Intent(CurrentToDetail.this, MainActivity.class);
+                startActivity(intent);
 
                 return true;
         }

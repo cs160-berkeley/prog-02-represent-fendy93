@@ -148,30 +148,27 @@ public class MainToCurrent extends AppCompatActivity {
             String twitter = intent1.getStringExtra("twitter" + i);
             String termEnd = intent1.getStringExtra("termEnd" + i);
             String website = intent1.getStringExtra("website" + i);
+            String email = intent1.getStringExtra("email" + i);
             ArrayList<Integer> count = intent1.getIntegerArrayListExtra("countComm" + i);
             Log.d("countComm", String.valueOf(count));
+            activeComittee = new ArrayList<String>();
             for (int k = 0; k < count.get(i); k++) {
                 ArrayList<Integer> count2 = intent1.getIntegerArrayListExtra("countBill" + i + k);
                 activeComittee.add("- " + intent1.getStringExtra("committeeName" + i + k) + "\n");
-                tempac = activeComittee;
                 Log.d("count2", String.valueOf(count2));
+                recentBills = new ArrayList<String>();
                 for (int j = 0; j < count2.get(k); j++) {
                     String filtered3 = intent1.getStringExtra("dateIntroduced" + i + k + j);
-                    if(filtered3.equals(year+"-"+month)){
-                        recentBills.add("- " + intent1.getStringExtra("dateIntroduced" + i + k + j) + ": " + intent1.getStringExtra("officialTitle" + i + k + j) + "\n");
-                        tempbc = recentBills;
-                    }
+                    recentBills.add("- " + intent1.getStringExtra("dateIntroduced" + i + k + j) + ": " + intent1.getStringExtra("officialTitle" + i + k + j) + "\n");
                 }
             }
             Log.d("ac_print", String.valueOf(activeComittee));
             if (title.equals("Sen")) {
-                info_sen.add(new Info(fullname, party, website, R.mipmap.mails_logo, "More Info", twitter, termEnd, tempac, recentBills));
+                info_sen.add(new Info(fullname, party, website, email, "More Info", twitter, termEnd, tempac, recentBills));
 
             } else {
-                info_rep.add(new Info(fullname, party, website, R.mipmap.mails_logo, "More Info", twitter, termEnd, tempbc, recentBills));
+                info_rep.add(new Info(fullname, party, website, email, "More Info", twitter, termEnd, tempbc, recentBills));
             }
-            activeComittee.clear();
-            recentBills.clear();
 
         }
     }
@@ -184,86 +181,6 @@ public class MainToCurrent extends AppCompatActivity {
         list.setAdapter(adapterSen);
         list1.setAdapter(adapterRep);
     }
-
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//
-//        // ATTENTION: This was auto-generated to implement the App Indexing API.
-//        // See https://g.co/AppIndexing/AndroidStudio for more information.
-//        client.connect();
-//        Action viewAction = Action.newAction(
-//                Action.TYPE_VIEW, // TODO: choose an action type.
-//                "MainToCurrent Page", // TODO: Define a title for the content shown.
-//                // TODO: If you have web page content that matches this app activity's content,
-//                // make sure this auto-generated web page URL is correct.
-//                // Otherwise, set the URL to null.
-//                Uri.parse("http://host/path"),
-//                // TODO: Make sure this auto-generated app deep link URI is correct.
-//                Uri.parse("android-app://com.android.candid/http/host/path")
-//        );
-//        AppIndex.AppIndexApi.start(client, viewAction);
-//    }
-
-//    @Override
-//    public void onStop() {
-//        super.onStop();
-//
-//        // ATTENTION: This was auto-generated to implement the App Indexing API.
-//        // See https://g.co/AppIndexing/AndroidStudio for more information.
-//        Action viewAction = Action.newAction(
-//                Action.TYPE_VIEW, // TODO: choose an action type.
-//                "MainToCurrent Page", // TODO: Define a title for the content shown.
-//                // TODO: If you have web page content that matches this app activity's content,
-//                // make sure this auto-generated web page URL is correct.
-//                // Otherwise, set the URL to null.
-//                Uri.parse("http://host/path"),
-//                // TODO: Make sure this auto-generated app deep link URI is correct.
-//                Uri.parse("android-app://com.android.candid/http/host/path")
-//        );
-//        AppIndex.AppIndexApi.end(client, viewAction);
-//        client.disconnect();
-//    }
-
-//    @Override
-//    public void onStart() {
-//        super.onStart();
-//
-//        // ATTENTION: This was auto-generated to implement the App Indexing API.
-//        // See https://g.co/AppIndexing/AndroidStudio for more information.
-//        client.connect();
-//        Action viewAction = Action.newAction(
-//                Action.TYPE_VIEW, // TODO: choose an action type.
-//                "MainToCurrent Page", // TODO: Define a title for the content shown.
-//                // TODO: If you have web page content that matches this app activity's content,
-//                // make sure this auto-generated web page URL is correct.
-//                // Otherwise, set the URL to null.
-//                Uri.parse("http://host/path"),
-//                // TODO: Make sure this auto-generated app deep link URI is correct.
-//                Uri.parse("android-app://com.android.candid/http/host/path")
-//        );
-//        AppIndex.AppIndexApi.start(client, viewAction);
-//    }
-//
-//    @Override
-//    public void onStop() {
-//        super.onStop();
-//
-//        // ATTENTION: This was auto-generated to implement the App Indexing API.
-//        // See https://g.co/AppIndexing/AndroidStudio for more information.
-//        Action viewAction = Action.newAction(
-//                Action.TYPE_VIEW, // TODO: choose an action type.
-//                "MainToCurrent Page", // TODO: Define a title for the content shown.
-//                // TODO: If you have web page content that matches this app activity's content,
-//                // make sure this auto-generated web page URL is correct.
-//                // Otherwise, set the URL to null.
-//                Uri.parse("http://host/path"),
-//                // TODO: Make sure this auto-generated app deep link URI is correct.
-//                Uri.parse("android-app://com.android.candid/http/host/path")
-//        );
-//        AppIndex.AppIndexApi.end(client, viewAction);
-//        client.disconnect();
-//    }
 
     private class MyListAdapterSen extends ArrayAdapter<Info> {
         public MyListAdapterSen() {
@@ -308,11 +225,9 @@ public class MainToCurrent extends AppCompatActivity {
             ImageView imageMail = (ImageView) itemView.findViewById(R.id.imageView_mail_rep_sen);
             imageMail.setImageResource(R.mipmap.mails_logo);
             imageMail.setOnClickListener(new View.OnClickListener() {
+
                 public void onClick(View v) {
-                    Intent intent = new Intent();
-                    intent.setAction(Intent.ACTION_VIEW);
-                    intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                    intent.setData(Uri.parse("http://www.mikulski.senate.gov/"));
+                    Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("mailto:" + currentInfo.getEmail()));
                     startActivity(intent);
                 }
             });
@@ -481,10 +396,7 @@ private class MyListAdapterRep extends ArrayAdapter<Info> {
         imageMail.setImageResource(R.mipmap.mails_logo);
         imageMail.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.addCategory(Intent.CATEGORY_BROWSABLE);
-                intent.setData(Uri.parse("http://www.mikulski.senate.gov/"));
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("mailto:" + currentInfo.getEmail()));
                 startActivity(intent);
             }
         });

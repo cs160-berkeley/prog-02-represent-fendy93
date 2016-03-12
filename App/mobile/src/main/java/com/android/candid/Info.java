@@ -12,14 +12,14 @@ public class Info {
     private String name;
     private String party;
     private String web;
-    private int email;
+    private String email;
     private String moreInfo;
     private String tweet;
     private String endDate;
     private ArrayList<String> activeComittee;
     private ArrayList<String> recentBills;
 
-    public Info(String name, String party, String web, int email, String moreInfo, String tweet, String endDate, ArrayList<String> activeComittee, ArrayList<String> recentBills) {
+    public Info(String name, String party, String web, String email, String moreInfo, String tweet, String endDate, ArrayList<String> activeComittee, ArrayList<String> recentBills) {
         super();
         this.name = name;
         this.party = party;
@@ -44,7 +44,7 @@ public class Info {
         return web;
     }
 
-    public int getEmail() {
+    public String getEmail() {
         return email;
     }
 

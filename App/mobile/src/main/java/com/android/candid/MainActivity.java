@@ -1,6 +1,7 @@
 package com.android.candid;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -31,6 +32,15 @@ import com.twitter.sdk.android.core.models.Tweet;
 import com.twitter.sdk.android.tweetui.TweetUtils;
 import com.twitter.sdk.android.tweetui.TweetView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import io.fabric.sdk.android.Fabric;
 
 import static com.google.android.gms.location.LocationServices.FusedLocationApi;
@@ -39,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         GoogleApiClient.OnConnectionFailedListener, LocationListener {
 
     private final static int PLAY_SERVICES_RESOLUTION_REQUEST = 1000;
+    private JSONArray jarray;
 
     private Location mLastLocation;
 
@@ -81,6 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         final SunLightHTTP data = new SunLightHTTP(this);
+        final SunLightHTTPZIP datazip = new SunLightHTTPZIP(this);
 
 //          Uncomment below if no tweet returned
 //        loginButton = (TwitterLoginButton) findViewById(R.id.login_button);
@@ -112,15 +124,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
                 EditText editText = (EditText) findViewById(R.id.zipcode);
-                if (editText.getText().length() == 0 || Integer.valueOf(editText.getText().toString()) != 76768) {
-                    editText.setError("Please enter ZIP Code: 76768");
+                Boolean ZIPValidation = getValidZIP(editText.getText().toString());
+                Log.d("zipTEXT", editText.getText().toString());
+                Log.d("ZIP valid", String.valueOf(ZIPValidation));
+                if (editText.getText().length() == 0 || !(ZIPValidation) || editText.getText().length() > 5) {
+                    editText.setError("Please enter valid ZIP Code");
                 } else {
                     intent = new Intent(MainActivity.this, MainToZip.class);
                     sendIntent = new Intent(getBaseContext(), PhoneToWatchService.class);
                     String message = editText.getText().toString();
                     intent.putExtra(EXTRA_MESSAGE, message);
+
+                    datazip.setData(editText.getText().toString());
+                    datazip.execute();
+
                     sendIntent.putExtra("Location", "ZIP");
-                    startService(sendIntent);
+//                    startService(sendIntent);
                     startActivity(intent);
                 }
             }
@@ -150,6 +169,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
             }
         });
+    }
+
+    public boolean getValidZIP(String zip) {
+        String regex = "^[0-9]{5}(?:-[0-9]{4})?$";
+
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(zip);
+        return matcher.matches();
     }
 
     //  Uncomment below if no tweet returned

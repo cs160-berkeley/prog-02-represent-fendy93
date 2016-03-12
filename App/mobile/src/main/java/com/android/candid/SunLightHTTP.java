@@ -29,6 +29,7 @@ public class SunLightHTTP extends AsyncTask<Void, Void, Void> {
     private String API_KEY = "778b67a7e69b4f779d949b64602e1d46";
     public String member_id;
     public int count;
+    public ArrayList<String> email = new ArrayList<String>();
     public String forecastJsonStr1;
     public ArrayList<String> committee_id = new ArrayList<String>();
     public ArrayList<Integer> count1 = new ArrayList<Integer>();
@@ -199,6 +200,12 @@ public class SunLightHTTP extends AsyncTask<Void, Void, Void> {
 
             try {
                 termEnd.add((String) repObject.get("term_end"));
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+
+            try {
+                email.add((String) repObject.get("oc_email"));
             } catch (JSONException e) {
                 e.printStackTrace();
             }
@@ -507,6 +514,7 @@ public class SunLightHTTP extends AsyncTask<Void, Void, Void> {
             intent1.putExtra("website" + i, website.get(i));
             intent1.putExtra("oc_email" + i, oc_email.get(i));
             intent1.putExtra("twitter" + i, tweet_id.get(i));
+            intent1.putExtra("email" + i, email.get(i));
             Log.d("twitter" + i, tweet_id.get(i));
             intent1.putExtra("countComm" + i, count0);
             Log.d("countCommSUN", String.valueOf(count0));
