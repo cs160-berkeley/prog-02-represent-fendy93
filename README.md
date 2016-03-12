@@ -13,7 +13,7 @@ See [Candid Wireframe] (https://youtu.be/yMpmqgd_hXg)
 ## Screenshots
 
 <!-- <img src="screenshots/main.png" height="400" alt="Screenshot"/> -->
-<img src="screenshots/Screen Shot Screen Shot 2016-03-03 at 12.08.01 AM.png" height="400" alt="Screenshot"/>
+<img src="screenshots/Screen Shot 2016-03-03 at 12.08.01 AM.png" height="400" alt="Screenshot"/>
 
 <img src="screenshots/Screen Shot 2016-03-03 at 12.08.08 AM.png" height="400" alt="Screenshot"/>
 
