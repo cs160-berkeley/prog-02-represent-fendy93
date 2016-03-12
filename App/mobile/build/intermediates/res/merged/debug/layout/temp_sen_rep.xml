@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f7f7f7"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="#ffffff">
+
+        <ImageButton
+            android:layout_width="70dp"
+            android:layout_height="60dp"
+            android:id="@+id/imageButton_rep_sen"
+            android:scaleType="fitXY"
+            android:background="#ffffff"
+            android:src="#000000"
+            android:paddingLeft="10dp"
+            android:paddingTop="5dp"
+            android:paddingRight="5dp"
+            android:layout_gravity="center_vertical" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Name"
+                android:id="@+id/name_rep_sen"
+                android:paddingBottom="5dp"
+                android:textSize="12dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="Party"
+                android:id="@+id/party_sen_rep"
+                android:paddingBottom="5dp"
+                android:textColor="#ff0000"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="35dp"
+                    android:id="@+id/imageView_web_rep_sen"
+                    android:src="@mipmap/com_logo"
+                    android:scaleType="fitCenter" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="45dp"
+                    android:id="@+id/imageView_mail_rep_sen"
+                    android:src="@mipmap/mails_logo"
+                    android:paddingBottom="10dp"
+                    android:scaleType="fitXY" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="More Info"
+                android:id="@+id/more_rep_sen"
+                android:paddingBottom="5dp"
+                android:textColor="#3a3f9d"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="5dp"
+            android:id="@+id/layout_twitter"
+            android:paddingRight="10dp"
+            android:baselineAligned="false">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/imageView"
+                android:src="@mipmap/tweet_logo"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:id="@+id/textView9"
+                android:background="#acacac" />
+
+            <ScrollView
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:id="@+id/twitter">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tweet_id_text"
+                    android:background="#ffffff"
+                    android:textColor="#040752"
+                    android:text="tweet_ID"
+                    android:textSize="12dp" />
+
+            </ScrollView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
