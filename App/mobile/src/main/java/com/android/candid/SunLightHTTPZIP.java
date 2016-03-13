@@ -499,12 +499,17 @@ public class SunLightHTTPZIP extends AsyncTask<Void, Void, Void> {
 
         Log.d("count", String.valueOf(count));
         intent1.putExtra("ZipMain123", zip);
+        Intent sendIntent = new Intent(context, PhoneToWatchService.class);
+        sendIntent.putExtra("Location", "ZIP");
+        sendIntent.putExtra("countS", count);
 
         Log.d("count", String.valueOf(count0));
         intent1.putExtra("count1", count);
         for(int i = 0; i < count; i++) {
             intent1.putExtra("full_name" + i, firstName.get(i) + " " + lastName.get(i));
+            sendIntent.putExtra("full_name_watch" + i, firstName.get(i) + " " + lastName.get(i));
             intent1.putExtra("party" + i, party.get(i));
+            sendIntent.putExtra("party_watch" + i, party.get(i));
             intent1.putExtra("termEnd" + i, termEnd.get(i));
             intent1.putExtra("title" + i, title.get(i));
             intent1.putExtra("website" + i, website.get(i));
@@ -525,6 +530,7 @@ public class SunLightHTTPZIP extends AsyncTask<Void, Void, Void> {
             }
         }
 
+        context.startService(sendIntent);
 
 
 

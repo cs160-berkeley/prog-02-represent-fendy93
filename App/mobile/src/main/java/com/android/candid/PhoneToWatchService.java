@@ -47,8 +47,9 @@ public class PhoneToWatchService extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
         // Which cat do we want to feed? Grab this info from INTENT
         // which was passed over when we called startService
-        Bundle extras = intent.getExtras();
-        final String location = extras.getString("latitude");
+        final Bundle extras = intent.getExtras();
+        final int count = extras.getInt("countS");
+        final String location = extras.getString("Location");
 
         // Send the message with the cat name
         new Thread(new Runnable() {
@@ -57,10 +58,41 @@ public class PhoneToWatchService extends Service {
                 //first, connect to the apiclient
                 mApiClient.connect();
                 //now that you're connected, send a massage with the cat name
-                System.out.println("******************************");
-                System.out.println(location);
-                System.out.println("******************************");
-                sendMessage("/" + location, location);
+                System.out.println("count_service");
+                System.out.println(count);
+
+                sendMessage("/count", String.valueOf(count));
+                try{
+                    Thread.sleep(500);
+                }
+                catch ( java.lang.InterruptedException ie) {
+                    System.out.println(ie);
+                }
+                for (int i = 0; i < count; i++) {
+                    final String fullNameWatch = extras.getString("full_name_watch" + i);
+                    final String partyWatch = extras.getString("party_watch" + i);
+                    System.out.println("******************************");
+                    System.out.println(fullNameWatch);
+                    System.out.println(partyWatch);
+                    System.out.println("******************************");
+                    sendMessage("fullName" + i, fullNameWatch);
+                    try{
+                        Thread.sleep(500);
+                    }
+                    catch ( java.lang.InterruptedException ie) {
+                        System.out.println(ie);
+                    }
+                    sendMessage("party" + i, partyWatch);
+                    try{
+                        Thread.sleep(500);
+                    }
+                    catch ( java.lang.InterruptedException ie) {
+                        System.out.println(ie);
+                    }
+                }
+
+                sendMessage("/Current", location);
+
             }
         }).start();
 

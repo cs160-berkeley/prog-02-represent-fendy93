@@ -48,6 +48,10 @@
         "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/res/layout/swipe_layout1.xml"
     },
     {
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/layout/temp_watch_list.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/res/layout/temp_watch_list.xml"
+    },
+    {
         "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/layout/activity_main.xml",
         "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/src/main/res/layout/activity_main.xml"
     }

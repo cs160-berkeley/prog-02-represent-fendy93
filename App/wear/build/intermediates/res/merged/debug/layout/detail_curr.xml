@@ -1,117 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:id="@+id/curr_list"
-    android:background="#ffffff"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:foregroundGravity="center">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="900dp"
-        android:layout_gravity="center_horizontal"
-        android:background="#6748ff">
-
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:id="@+id/bm_imgb"
-            android:background="#6748ff"
-            android:layout_marginTop="53dp"
-            android:src="@mipmap/bm_icon"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:scaleType="fitXY" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Barbara Mikulski"
-            android:id="@+id/bm_textb"
-            android:textColor="#ffffff"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:layout_below="@+id/bm_imgb"
-            android:layout_centerHorizontal="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Democrat"
-            android:id="@+id/bm_party"
-            android:textColor="#ffffff"
-            android:paddingTop="5dp"
-            android:paddingBottom="20dp"
-            android:layout_below="@+id/bm_textb"
-            android:layout_centerHorizontal="true" />
-
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:id="@+id/bb_imgb"
-            android:background="#6748ff"
-            android:src="@mipmap/bb"
-            android:scaleType="fitXY"
-            android:layout_below="@+id/bm_party"
-            android:layout_alignStart="@+id/bl_imgb" />
-
-        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:id="@+id/bl_imgb"
-            android:background="#6748ff"
-            android:src="@mipmap/bl"
-            android:scaleType="fitXY"
-            android:layout_below="@+id/bb_party"
-            android:layout_alignStart="@+id/bl_name" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Barbara Boxer"
-            android:id="@+id/bb_textb"
-            android:textColor="#ffffff"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:layout_below="@+id/bb_imgb"
-            android:layout_centerHorizontal="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Democrat"
-            android:id="@+id/bb_party"
-            android:layout_below="@+id/bb_textb"
-            android:layout_centerHorizontal="true"
-            android:paddingBottom="20dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Barbara Lee"
-            android:id="@+id/bl_name"
-            android:textColor="#ffffff"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:layout_below="@+id/bl_imgb"
-            android:layout_centerHorizontal="true" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="Democrat"
-            android:id="@+id/bl_party"
-            android:textColor="#ffffff"
-            android:paddingTop="5dp"
-            android:paddingBottom="5dp"
-            android:layout_below="@+id/bl_name"
-            android:layout_centerHorizontal="true" />
-
-    </RelativeLayout>
-</ScrollView>
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView_wear"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#000000"
+        android:textAlignment="center" />
+</LinearLayout>

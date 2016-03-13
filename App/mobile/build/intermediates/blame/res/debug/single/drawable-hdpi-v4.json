@@ -24,12 +24,12 @@
         "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.10.0/res/drawable-hdpi/tw__ic_seekbar_progress_bg.9.png"
     },
     {
-        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_google_signin_btn_icon_dark_disabled.9.png",
-        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_google_signin_btn_icon_dark_disabled.9.png"
-    },
-    {
         "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/res/merged/debug/drawable-hdpi-v4/dgts__spinner_light.png",
         "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/exploded-aar/com.digits.sdk.android/digits/1.10.0/res/drawable-hdpi/dgts__spinner_light.png"
+    },
+    {
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_google_signin_btn_icon_dark_disabled.9.png",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_google_signin_btn_icon_dark_disabled.9.png"
     },
     {
         "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_google_signin_btn_text_light_focused.9.png",
@@ -40,12 +40,12 @@
         "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/exploded-aar/com.twitter.sdk.android/tweet-ui/1.10.0/res/drawable-hdpi/tw__ic_play_pressed.png"
     },
     {
-        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_ic_googleplayservices.png",
-        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_ic_googleplayservices.png"
-    },
-    {
         "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/res/merged/debug/drawable-hdpi-v4/ic_play_dark.png",
         "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/23.0.0/res/drawable-hdpi/ic_play_dark.png"
+    },
+    {
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/res/merged/debug/drawable-hdpi-v4/common_ic_googleplayservices.png",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.4.0/res/drawable-hdpi/common_ic_googleplayservices.png"
     },
     {
         "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/res/merged/debug/drawable-hdpi-v4/tw__ic_seekbar_secondary_bg.9.png",

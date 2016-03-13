@@ -48,12 +48,12 @@
         "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_ratingbar_full_material.xml"
     },
     {
-        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
-        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_colored_material.xml"
-    },
-    {
         "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/res/merged/debug/drawable/abc_btn_check_material.xml",
         "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_check_material.xml"
+    },
+    {
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/res/merged/debug/drawable/abc_btn_colored_material.xml",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.1.1/res/drawable/abc_btn_colored_material.xml"
     },
     {
         "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/mobile/build/intermediates/res/merged/debug/drawable/mr_ic_cast_light.xml",

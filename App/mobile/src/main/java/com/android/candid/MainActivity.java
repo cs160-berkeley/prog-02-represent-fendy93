@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-    //  Uncomment below if no tweet returned
+        //  Uncomment below if no tweet returned
         TwitterAuthConfig authConfig = new TwitterAuthConfig(TWITTER_KEY, TWITTER_SECRET);
         Fabric.with(this, new Twitter(authConfig));
 
@@ -141,10 +141,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                     datazip.setData(editText.getText().toString());
                     datazip.execute();
-
-                    sendIntent.putExtra("Location", "ZIP");
-                    startService(sendIntent);
-                    startActivity(intent);
                 }
             }
         });
@@ -155,23 +151,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onClick(View v) {
                 displayLocation();
                 togglePeriodicLocationUpdates();
-                Intent sendIntent = new Intent(getBaseContext(), PhoneToWatchService.class);
+
                 Intent intent = new Intent(MainActivity.this, MainToCurrent.class);
                 String lat = Double.toString(latitude);
                 String lng = Double.toString(longitude);
 
 //                String lat = String.valueOf(37.8716);
 //                String lng = String.valueOf(-122.273);
-                Context context =getApplicationContext();
-                String countyName = null;
-
-                sendIntent.putExtra("Location", "Current");
-                startService(sendIntent);
+//                Context context =getApplicationContext();
+//                String countyName = null;
 
                 data.setData(lat, lng);
                 data.execute();
-
-
 
                 startActivity(intent);
             }
@@ -318,7 +309,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             // Stopping the location updates
             stopLocationUpdates();
 
-            Log.d("Location successfully updated", "Periodic location updates stopped!");
+//            Log.d("Location successfully updated", "Periodic location updates stopped!");
         }
     }
 
@@ -377,7 +368,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //                                          int[] grantResults)
             // to handle the case where the user grants the permission. See the documentation
             // for ActivityCompat#requestPermissions for more details.
-            Log.d("START LOCATION UPDATE STATUS", "PERMISSION DENIED");
+//            Log.d("START LOCATION UPDATE STATUS", "PERMISSION DENIED");
             return;
         }
         FusedLocationApi.requestLocationUpdates(

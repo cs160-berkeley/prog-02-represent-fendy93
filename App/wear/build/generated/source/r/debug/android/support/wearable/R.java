@@ -137,20 +137,20 @@ public final class R {
 		public static final int center_vertical = 0x7f0e000b;
 		public static final int clip_horizontal = 0x7f0e000c;
 		public static final int clip_vertical = 0x7f0e000d;
-		public static final int dismiss_overlay_button = 0x7f0e0036;
-		public static final int dismiss_overlay_explain = 0x7f0e0035;
+		public static final int dismiss_overlay_button = 0x7f0e0023;
+		public static final int dismiss_overlay_explain = 0x7f0e0022;
 		public static final int end = 0x7f0e000e;
 		public static final int fill = 0x7f0e000f;
 		public static final int fill_horizontal = 0x7f0e0010;
 		public static final int fill_vertical = 0x7f0e0011;
 		public static final int fit = 0x7f0e0006;
 		public static final int left = 0x7f0e0002;
-		public static final int message = 0x7f0e0037;
+		public static final int message = 0x7f0e0024;
 		public static final int parentPanel = 0x7f0e0016;
 		public static final int right = 0x7f0e0003;
 		public static final int start = 0x7f0e0012;
-		public static final int text = 0x7f0e004c;
-		public static final int title = 0x7f0e004b;
+		public static final int text = 0x7f0e003b;
+		public static final int title = 0x7f0e003a;
 		public static final int top = 0x7f0e0004;
 	}
 	public static final class interpolator {
@@ -165,7 +165,7 @@ public final class R {
 		public static final int alert_dialog_wearable = 0x7f040001;
 		public static final int dismiss_overlay = 0x7f040006;
 		public static final int error_layout = 0x7f040007;
-		public static final int watch_card_content = 0x7f04000c;
+		public static final int watch_card_content = 0x7f04000d;
 	}
 	public static final class string {
 		public static final int dismiss_overlay_button_label = 0x7f08001e;

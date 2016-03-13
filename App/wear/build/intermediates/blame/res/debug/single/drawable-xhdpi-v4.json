@@ -48,12 +48,12 @@
         "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.support/wearable/1.3.0/res/drawable-xhdpi-v4/card_frame_pressed.9.png"
     },
     {
-        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_signin_btn_icon_focus_light.9.png",
-        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.1.0/res/drawable-xhdpi/common_signin_btn_icon_focus_light.9.png"
-    },
-    {
         "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_signin_btn_icon_disabled_light.9.png",
         "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.1.0/res/drawable-xhdpi/common_signin_btn_icon_disabled_light.9.png"
+    },
+    {
+        "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_signin_btn_icon_focus_light.9.png",
+        "source": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/8.1.0/res/drawable-xhdpi/common_signin_btn_icon_focus_light.9.png"
     },
     {
         "merged": "/Users/Fendy/Desktop/prog-02-represent-fendy93/App/wear/build/intermediates/res/merged/debug/drawable-xhdpi-v4/common_signin_btn_text_disabled_focus_light.9.png",
