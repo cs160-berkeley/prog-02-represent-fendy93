@@ -1,14 +1,14 @@
 # PROG 02: Candid!
 
-Candid is the most recent votes on the go.
+Candid is the most recent votes on the go!
 
 ## Authors
 
-Fendy Soegiono([fsoegiono@berkeley.edu](mailto:fsoegiono@berkeley.edu))
+Fendy Soegiono ([fsoegiono@berkeley.edu](mailto:fsoegiono@berkeley.edu))
 
 ## Demo Video
 
-See [Candid Wireframe] (https://youtu.be/yMpmqgd_hXg)
+See [Candid Wireframe] (https://youtu.be/6JORaMJord0)
 
 ## Screenshots
 
